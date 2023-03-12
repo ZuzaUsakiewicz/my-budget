@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
+import FourOFour from "./pages/FourOFour";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
           Contact
         </Route>
       </Route>
+      <Route path="*" element={<FourOFour />} />
     </Route>
   )
 );
