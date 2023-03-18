@@ -11,7 +11,7 @@ export default function Careers() {
   return (
     <div>
       {careers.map((item: Item) => (
-        <Link to="/" key={item.id}>
+        <Link to={item.id.toString()} key={item.id}>
           {item.name}
         </Link>
       ))}
