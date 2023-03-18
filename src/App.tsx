@@ -16,6 +16,7 @@ import FourOFour from "./pages/FourOFour";
 import CareersLayout from "./layouts/CareersLayout";
 import Careers, { careersLoader } from "./pages/Careers";
 import CareerDetails, { careerDetailsLoader } from "./pages/CareerDetails";
+import CareerError from "./pages/CareerError";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +31,11 @@ const router = createBrowserRouter(
           Contact
         </Route>
       </Route>
-      <Route path="careers" element={<CareersLayout />}>
+      <Route
+        path="careers"
+        element={<CareersLayout />}
+        errorElement={<CareerError />}
+      >
         <Route index element={<Careers />} loader={careersLoader} />
         <Route
           path=":id"

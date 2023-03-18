@@ -21,5 +21,8 @@ export default function Careers() {
 
 export const careersLoader = async () => {
   const res = await fetch("https://api.punkapi.com/v2/beers");
+  if (!res.ok) {
+    throw Error("Could not fetch API");
+  }
   return res;
 };
