@@ -11,7 +11,7 @@ import HelpLayout from "./layouts/HelpLayout";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Faq from "./pages/Faq";
-import Contact from "./pages/Contact";
+import Contact, { contactAction } from "./pages/Contact";
 import FourOFour from "./pages/FourOFour";
 import CareersLayout from "./layouts/CareersLayout";
 import Careers, { careersLoader } from "./pages/Careers";
@@ -23,11 +23,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="Help" element={<HelpLayout />}>
+      <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />}>
           Faq
         </Route>
-        <Route path="contact" element={<Contact />}>
+        <Route path="contact" element={<Contact />} action={contactAction}>
           Contact
         </Route>
       </Route>
